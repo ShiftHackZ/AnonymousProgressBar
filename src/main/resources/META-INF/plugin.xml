@@ -2,6 +2,7 @@
     <id>com.shz.anonymous-progress-bar</id>
     <name>Anonymous Progress Bar</name>
     <version>1.0</version>
+    <idea-version since-build="192"/>
     <vendor email="dmitriy@moroz.cc" url="https://moroz.cc">Dmitriy Moroz (ShiftHackZ)</vendor>
 
     <description><![CDATA[

@@ -1,32 +1,36 @@
-plugins {
-    id 'java'
-    id 'org.jetbrains.intellij' version '1.2.1'
-}
-
-group 'com.shz'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
+/**
+ * Anonymous Progress Bar main buildscript file
+ *
+ * @author Dmitriy Moroz, 26.12.2021
+ */
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
     }
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.7.2'
+}
+
+group 'com.shz'
+version '1.0'
+
+sourceSets {
+    main {
+        java.srcDirs 'src/main/java'
+        resources.srcDir 'src/main/resources'
+    }
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version '2020.3.1'
 }
-//patchPluginXml {
-//    changeNotes """
-//      Add change notes here.<br>
-//      <em>most HTML tags may be used</em>"""
-//}
-test {
-    useJUnitPlatform()
+
+repositories {
+    mavenCentral()
+    maven { url "https://plugins.gradle.org/m2/" }
 }
