@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.shz.anonymous-progress-bar</id>
+    <name>Anonymous Progress Bar</name>
+    <version>1.0</version>
+    <vendor email="dmitriy@moroz.cc" url="https://moroz.cc">Dmitriy Moroz (ShiftHackZ)</vendor>
+
+    <description><![CDATA[
+      The plugin allows you to see Anonymous Progress Bar in your IJ based IDEs.
+      This is the fork of the Nyan Progress Bar by Dmitry Batkovitch.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <em>1.0 Creation of the Anonymous Progress Bar.</em><br>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <applicationListeners>
+        <listener class="AnonymousProgressBarLafManagerListener"
+                  topic="com.intellij.ide.ui.LafManagerListener" />
+    </applicationListeners>
+</idea-plugin>
