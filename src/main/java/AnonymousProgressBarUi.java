@@ -20,8 +20,6 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
 
     private static final float ONE_OVER_SEVEN = 1f / 7;
 
-    private static final Color VIOLET = new JBColor(new Color(90, 0, 157), new Color(90, 0, 157));
-
     @SuppressWarnings({"MethodOverridesStaticMethodOfSuperclass", "UnusedDeclaration"})
     public static ComponentUI createUI(JComponent c) {
         c.setBorder(JBUI.Borders.empty().asUIResource());
@@ -69,7 +67,7 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
         g.setColor(new JBColor(Gray._240.withAlpha(50), Gray._128.withAlpha(50)));
         int w = c.getWidth();
         int h = c.getPreferredSize().height;
-        if (!isEven(c.getHeight() - h)) h++;
+        if (isEven(c.getHeight() - h)) h++;
 
         LinearGradientPaint baseRainbowPaint = getProgressBarPaint(h);
 
@@ -86,8 +84,8 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
         Paint old = g.getPaint();
         g.setPaint(baseRainbowPaint);
 
-        final float R = JBUI.scale(8f);
-        final float R2 = JBUI.scale(9f);
+        final float R = JBUIScale.scale(8f);
+        final float R2 = JBUIScale.scale(9f);
         final Area containingRoundRect = new Area(new RoundRectangle2D.Float(1f, 1f, w - 2f, h - 2f, R, R));
         g.fill(containingRoundRect);
         g.setPaint(old);
@@ -144,7 +142,7 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
         Insets b = progressBar.getInsets(); // area for border
         int w = progressBar.getWidth();
         int h = progressBar.getPreferredSize().height;
-        if (!isEven(c.getHeight() - h)) h++;
+        if (isEven(c.getHeight() - h)) h++;
 
         int barRectWidth = w - (b.right + b.left);
         int barRectHeight = h - (b.top + b.bottom);
@@ -248,7 +246,7 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
     }
 
     private static boolean isEven(int value) {
-        return value % 2 == 0;
+        return value % 2 != 0;
     }
 }
 

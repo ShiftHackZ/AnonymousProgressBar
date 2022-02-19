@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>com.shz.anonymous-progress-bar</id>
     <name>Anonymous Progress Bar</name>
-    <version>1.0</version>
-    <idea-version since-build="192"/>
+    <version>1.0.1</version>
+    <idea-version since-build="192" />
     <vendor email="dmitriy@moroz.cc" url="https://moroz.cc">Dmitriy Moroz (ShiftHackZ)</vendor>
 
     <description><![CDATA[
@@ -11,6 +11,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      <em>1.0.1 Added support for 2021 Intelij IDEA Versions.</em><br>
       <em>1.0 Creation of the Anonymous Progress Bar.</em><br>
     ]]>
     </change-notes>
