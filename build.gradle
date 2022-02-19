@@ -16,7 +16,7 @@ plugins {
 }
 
 group 'com.shz'
-version '1.0'
+version '1.0.1'
 
 sourceSets {
     main {
@@ -27,7 +27,14 @@ sourceSets {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.3.1'
+    version 'LATEST-EAP-SNAPSHOT'
+    updateSinceUntilBuild = true
+}
+
+tasks {
+    patchPluginXml {
+        sinceBuild = '192.*'
+    }
 }
 
 repositories {
