@@ -12,11 +12,11 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.2'
+    id 'org.jetbrains.intellij' version '1.13.3'
 }
 
 group 'com.shz'
-version '1.0.1'
+version '1.0.2'
 
 sourceSets {
     main {
@@ -27,15 +27,17 @@ sourceSets {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version 'LATEST-EAP-SNAPSHOT'
+    version = 'LATEST-EAP-SNAPSHOT'
     updateSinceUntilBuild = true
 }
 
 tasks {
     patchPluginXml {
-        sinceBuild = '192.*'
+        sinceBuild = '221.*'
     }
 }
+
+tasks.withType(Copy).configureEach { duplicatesStrategy 'exclude' }
 
 repositories {
     mavenCentral()
