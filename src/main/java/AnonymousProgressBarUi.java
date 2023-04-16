@@ -223,16 +223,16 @@ public class AnonymousProgressBarUi extends BasicProgressBarUI {
                         ONE_OVER_SEVEN * 4,
                         ONE_OVER_SEVEN * 5,
                         ONE_OVER_SEVEN * 6,
-                        ONE_OVER_SEVEN * 7
+                        ONE_OVER_SEVEN * 7,
                 },
                 new Color[]{
-                        new JBColor(new Color(173, 188, 218), new Color(173, 188, 218)),
-                        new JBColor(new Color(192, 173, 231), new Color(192, 173, 231)),
-                        new JBColor(new Color(204, 203, 156), new Color(204, 203, 156)),
-                        new JBColor(new Color(236, 201, 213), new Color(212, 236, 201)),
-                        new JBColor(new Color(204, 203, 156), new Color(204, 203, 156)),
-                        new JBColor(new Color(192, 173, 231), new Color(192, 173, 231)),
-                        new JBColor(new Color(173, 188, 218), new Color(173, 188, 218))
+                        new JBColor(new Color(50, 99, 201), new Color(50, 99, 201)),
+                        new JBColor(new Color(74, 120, 215), new Color(74, 120, 215)),
+                        new JBColor(new Color(98, 138, 222), new Color(98, 138, 222)),
+                        new JBColor(new Color(98, 138, 222), new Color(131, 169, 241)),
+                        new JBColor(new Color(241, 214, 131), new Color(241, 214, 131)),
+                        new JBColor(new Color(238, 207, 113), new Color(238, 207, 113)),
+                        new JBColor(new Color(217, 177, 52), new Color(217, 177, 52)),
                 });
     }
 
